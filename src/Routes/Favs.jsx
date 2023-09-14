@@ -1,19 +1,37 @@
 import React from "react";
+import { useOdontoStates } from "../Context/Context";
 import Card from "../Components/Card";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { useTheme } from '../Context/ThemeContext';
 
 const Favs = () => {
+  const { favs, setFavs } = useOdontoStates();
+  const { theme } = useTheme();
+
+  // funccion de boton X para eliminar de destacado
+  const removeFromFavs = (odontologoToRemove) => {
+    const updatedFavs = favs.filter((fav) => fav.id !== odontologoToRemove.id);
+    setFavs(updatedFavs);
+  };
 
   return (
     <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
+      <div className={theme === 'dark' ? 'dark' : 'light'}>
+        <h1>Dentistas Destacados</h1>
+        <div className="card-grid">
+          {favs.map((fav) => (
+            <Card
+              odontologo={fav}
+              key={fav.id}
+              onRemoveFromFavs={removeFromFavs} // Pasa la función removeFromFavs
+              isFav={true} // Marcar como favorito
+            />
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
 export default Favs;
+
+

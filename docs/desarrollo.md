@@ -22,11 +22,11 @@ Se utilizará la version de React 18.0.2
 
 Solo se podrán instalar las siguientes dependencias:
 
-- React
-- testing-library
-- react-router-dom
-- react-dom
-- axios (opcional para quienes quieran)
+- React (ok instalado)
+- testing-library (ok instalado)
+- react-router-dom (ok instalado)
+- react-dom (ok instalado)
+- axios (ok instalado)
 
 ## Recomendaciones a Seguir
 

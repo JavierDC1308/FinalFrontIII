@@ -11,7 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -19,58 +20,52 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1 {
   text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0.67em;
 }
 
-nav{
+nav {
   display: flex;
-  width: 80vw;
+
   justify-content: flex-start;
   padding: 1rem;
 }
 
-a{
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+
 }
 
-footer > img{
+footer>img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+
+footer>p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
 
-.card{
+
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -80,11 +75,11 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -95,15 +90,16 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -113,10 +109,129 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+
+.dark>a {
   color: white;
+}
+
+.content-wrapper {
+
+  margin: 0px auto;
+  /* Centra horizontalmente */
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+}
+
+
+.my-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.user-list {
+  max-width: 600px;
+  margin: 10px auto;
+  /* Añade 'auto' para centrar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  /* Apila los elementos verticalmente */
+
+}
+
+.user-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* Centra el texto dentro de cada elemento */
+}
+
+.user-message {
+  font-weight: bold;
+}
+
+.user-email {
+  color: #007bff;
+}
+
+.table-style {
+  width: 100%;
+  /* Ancho de la tabla al 100% del contenedor */
+  border-collapse: collapse;
+  /* Fusionar bordes de celdas */
+
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  /* Centrar verticalmente */
+}
+
+.doctor-image {
+  width: 175px;
+  /* Ajusta el ancho de la imagen según tus preferencias */
+}
+
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.table-style th {
+  background-color: #f0f0f0;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-style td {
+  padding: 8px;
+}
+
+.centered-cell {
+  text-align: center;
+}
+
+.error-message {
+  color: red;
 }
