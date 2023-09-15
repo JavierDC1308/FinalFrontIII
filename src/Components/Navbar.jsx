@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={theme === 'dark' ? 'dark' : 'light'} style={{ display: 'flex' }}>
+    <nav className={theme === 'dark' ? 'dark' : 'light'} style={{ display: 'flex' }}> 
       {enlaces.map((enlace, indice) => (
         <Link to={enlace.route} key={indice}>
           <h4 style={{ margin: 10 }}>{enlace.titulo}</h4>

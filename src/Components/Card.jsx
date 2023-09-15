@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../Context/ThemeContext';
 
 const Card = ({ odontologo, isFav, onAddToFavs, onRemoveFromFavs }) => {
   const handleClickAddToFavs = () => {
@@ -10,9 +11,11 @@ const Card = ({ odontologo, isFav, onAddToFavs, onRemoveFromFavs }) => {
     onRemoveFromFavs(odontologo);
   };
 
+  const { theme } = useTheme(); // Obtiene el tema actual desde el contexto del tema
+
   return (
-    <div>
-      <div style={{ display: 'flex', justifyContent: 'center' }} className="card">
+    <div className={`card ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Link to={`/recipe/` + odontologo.id}>
           <img src="/images/doctor.jpg" alt="Card" width={200} />
           <p>ID: {odontologo.id}</p>
@@ -26,8 +29,8 @@ const Card = ({ odontologo, isFav, onAddToFavs, onRemoveFromFavs }) => {
           <button onClick={handleClickAddToFavs} className="favButton">⭐</button>
         )}
       </div>
-
     </div>
+
   );
 };
 

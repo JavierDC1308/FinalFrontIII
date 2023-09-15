@@ -50,14 +50,14 @@ const Form = () => {
   return (
     <div className={theme === 'dark' ? 'dark' : 'light'}>
       <div>
-        <form onSubmit={handleSubmit} className="my-form">
+        <form onSubmit={handleSubmit} className="my-form" >
           <label>
             Nombre y apellido
-            <input type="text" name="message" onChange={handleChange} value={newUser.message} />
+            <input type="text" name="message" onChange={handleChange} value={newUser.message} autoComplete="name"/>
           </label>
           <label>
             Email
-            <input type="email" name="email" onChange={handleChange} value={newUser.email} />
+            <input type="email" name="email" onChange={handleChange} value={newUser.email} autoComplete="email"/>
           </label>
           <button>Submit</button>
         </form>
